@@ -5,7 +5,7 @@ class Projects extends Component {
   constructor(props){
     super(props);
     this.state = {
-         activeTab: 0
+         activeTab: false
         };
    }
 
@@ -15,12 +15,14 @@ class Projects extends Component {
           <div className="projects-grid">
           {/* Project 1 */}
           <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
-            <CardTitle style={{ color: 'black', height: '176px', background: 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png) center / cover'}}> React Project #1</CardTitle>
+            <CardTitle style={{ color: 'black', height: '176px', background: 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png) center / cover'}}> Project: Blood-Donation</CardTitle>
             <CardText>
-              ghhgjlhghhhhhhhhhhbhbbnmbjkkjjkjljlm,.m,,mnjhjbnmnmbnbnvbnvbfdfddfs
+              Blood donations are often done by individuals because often hospitals don't have enough blood to give to those in need.
             </CardText>
             <CardActions border>
-              <Button colored>Github</Button>
+
+              <Button center colored>Github</Button>
+
             </CardActions>
             <CardMenu style={{ color:'#fff'}}>
               <IconButton name="share" />
@@ -29,12 +31,26 @@ class Projects extends Component {
 
           {/* Project 2 */}
           <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
-            <CardTitle style={{ color: 'black', height: '176px', background: 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png) center / cover'}}> React Project #2</CardTitle>
+            <CardTitle style={{ color: 'black', height: '176px', background: 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png) center / cover'}}>Project: Instagram App</CardTitle>
             <CardText>
-              ghhgjlhghhhhhhhhhhbhbbnmbjkkjjkjljlm,.m,,mnjhjbnmnmbnbnvbnvbfdfddfs
+              This is a group project duplicating the instagram application, built by using NodeJS and Express.
             </CardText>
             <CardActions border>
-              <Button colored>Github</Button>
+              <Button  centred colored>Github</Button>
+            </CardActions>
+            <CardMenu style={{ color:'#fff'}}>
+              <IconButton name="share" />
+            </CardMenu>
+          </Card>
+
+          {/* Project 3 */}
+          <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
+            <CardTitle style={{ color: 'black', height: '176px', background: 'url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png) center / cover'}}> Project: RottenTomatoes</CardTitle>
+            <CardText>
+              This is a Group project duplicating RottenTomatoes by using ReactJS and Redux and OMDB'S API.
+            </CardText>
+            <CardActions border>
+              <Button center colored>Github</Button>
             </CardActions>
             <CardMenu style={{ color:'#fff'}}>
               <IconButton name="share" />
@@ -44,11 +60,11 @@ class Projects extends Component {
         )
       }else if(this.state.activeTab === 1){
         return(
-          <div><h1>This is NodeJS</h1></div>
+          <div><h1>This is Instagram-clone</h1></div>
         )
       }else if(this.state.activeTab === 2){
         return(
-          <div><h1>This is PostgreSQL</h1></div>
+          <div><h1>This is RottenTomates-clone</h1></div>
         )
       }
     }
@@ -56,23 +72,21 @@ class Projects extends Component {
 
   render() {
     return(
-        <div calssName="category-tabs">
-          <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId})} ripple>
-            <Tab>React</Tab>
-            <Tab>NodeJS</Tab>
-            <Tab>PostgreSQL</Tab>
+        <div className="category-tabs">
+          <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
+            <Tab>Blood-Donation</Tab>
+            <Tab>Instagram-clone</Tab>
+            <Tab>RottenTomates-clone</Tab>
           </Tabs>
 
-          
+
             <Grid>
               <Cell col={12}>
                 <div className="content">{this.toggleCategories()}</div>
               </Cell>
             </Grid>
 
-
-
-        </div>
+         </div>
     )
   }
 }

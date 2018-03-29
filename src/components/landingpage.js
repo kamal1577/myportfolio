@@ -18,12 +18,12 @@ class Landing extends Component {
                                   <p>HTML/CSS | Javascript | Bootstrap | ReactJS | Redux | NodeJS | Express | PostgreSQL</p>
                                   <div className="social-links">
                                     {/* LinkedIn */}
-                                    <a href="http://google.com" rel="noopener noreferrer" target="_blank">
+                                    <a href="https://www.linkedin.com/in/kamal-el-azizi-alaoui-699266160/" rel="noopener noreferrer" target="_blank">
                                       <i className="fa fa-linkedin-square" aria-hidden="true" />
                                     </a>
 
                                     {/* Github */}
-                                    <a href="http://google.com" rel="noopener noreferrer" target="_blank">
+                                    <a href="https://github.com/kamal1577" rel="noopener noreferrer" target="_blank">
                                       <i className="fa fa-github-square" aria-hidden="true" />
                                     </a>
                                    </div>
